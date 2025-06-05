@@ -139,9 +139,10 @@ Copy this template to your project's `README.md`:
 ---
 
 ## 🆘 Help & Support
-- **No GitHub account?** W3PN team can help upload your submission
-- **Technical issues?** Find organizers at the venue or write to the official Signal group
-- **Questions?** Ask mentors or organizing team
+
+**No GitHub account?** Technical issues? Question?
+
+Contact our submissions coordinator **Tree** via [Signal](https://signal.me/#eu/08P5JDn8VtVDLDpFl0ihILAxoYu0fNa7kEVimHlvbZTRiNQflwtNM5FbhCDG0BKJ) for assistance.
 
 ---
 
