@@ -65,7 +65,7 @@ Choose one track for your submission ([see detailed descriptions](https://github
 Copy this template to your project's `README.md`:
 
 ```markdown
-# Project Name
+# [Project Name]
 
 - **Track:** [Choose one from above]
 - **Team/Contributors:** [All who contributed - diverse skills welcomed]
