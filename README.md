@@ -4,14 +4,14 @@
 
 - 🌐 [Hackathon Website](https://hackathon.web3privacy.info/)
 - 📋 [Hackathon Manifesto](https://hackathon.web3privacy.info/info)
-- 📖 [Hacker Manual](https://github.com/web3privacy/hackathon-2025-berlin) ← RTFM!
+- 📖 [Hacker Manual](https://hackathon.web3privacy.info/manual) ← RTFM!
 
 ---
 
 ## 🚀 How to Submit
 
 1. **Fork this repository**
-2. **Create a folder** with your project name: `/projects/your-project-name/`
+2. **Create a folder** with your project namie: `/projects/your-project-name/`
 3. **Copy the submission template** ([see below](#-submission-template))
 4. **Submit via Pull Request (PR)** before deadline
 5. **Prepare for [Project Presentations](#-project-presentations)** - get ready to present your project after submissions close
@@ -22,6 +22,9 @@
 
 ### 🎤 Project Presentations
 **After the submission deadline**, all teams must be prepared to present their submitted projects to judges. Watch the official Signal group for announcements and further information about presentation process.
+
+### ⚖️ Judging
+All submissions will be evaluated by expert judges according to the [Judging Criteria](https://github.com/web3privacy/hackathon-2025-berlin/blob/main/README.md#%EF%B8%8F-judging-criteria) after the deadline and the project presentations.
 
 ## 📋 Project folder
 
