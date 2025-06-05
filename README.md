@@ -13,11 +13,15 @@
 1. **Fork this repository**
 2. **Create a folder** with your project name: `/projects/your-project-name/`
 3. **Copy the submission template** ([see below](#-submission-template))
-4. **Submit via Pull Request** before deadline
-5. **Share openly** - help others and get help
+4. **Submit via Pull Request (PR)** before deadline
+5. **Prepare for [Project Presentations](#-project-presentations)** - get ready to present your project after submissions close
+6. **Share openly** - help others and get help
 
 ### ⏰ Submission Deadline
 **Sunday, June 15, 2025 at 16:30 CEST**
+
+### 🎤 Project Presentations
+**After the submission deadline**, all teams must be prepared to present their submitted projects to judges. Watch the official Signal group for announcements and further information about presentation process.
 
 ## 📋 Project folder
 
@@ -118,7 +122,7 @@ Copy this template to your project's `README.md`:
 
 ## 🆘 Help & Support
 - **No GitHub account?** W3PN team can help upload your submission
-- **Technical issues?** Find organizers at the venue
+- **Technical issues?** Find organizers at the venue or write to the official Signal group
 - **Questions?** Ask mentors or organizing team
 
 ---
