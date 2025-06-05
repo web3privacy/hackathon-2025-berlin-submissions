@@ -105,7 +105,8 @@ Copy this template to your project's `README.md`:
 
 ### 👥 Team Rules
 - **Individual or team submissions** welcome
-- **Team size:** Maximum 5 people
+- **Team size:** No limits, consider collaboration over competition
+- **Cross-team collaboration** encouraged
 - **One submission per team/individual**
 
 ### ✅ Content Requirements
