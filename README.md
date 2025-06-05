@@ -14,11 +14,15 @@
 2. **Create a folder** with your project namie: `/projects/your-project-name/`
 3. **Copy the submission template** ([see below](#-submission-template))
 4. **Submit via Pull Request (PR)** before deadline
-5. **Prepare for [Project Presentations](#-project-presentations)** - get ready to present your project after submissions close
-6. **Share openly** - help others and get help
+
+What's next?
+- **Prepare for [Project Presentations](#-project-presentations)** - get ready to present your project after submissions close
+- **Share openly** - help others and get help
 
 ### ⏰ Submission Deadline
 **Sunday, June 15, 2025 at 16:30 CEST**
+
+*We encourage everyone to send a Pull Request with Submission earlier than a few minutes before the deadline to allow for fixes and avoid disqualification based on missing information.*
 
 ### 🎤 Project Presentations
 **After the submission deadline**, all teams must be prepared to present their submitted projects to judges. Watch the official Signal group for announcements and further information about presentation process.
