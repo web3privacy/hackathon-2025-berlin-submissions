@@ -13,15 +13,18 @@
 1. **Fork this repository**
 2. **Create a folder** with your project name: `/projects/your-project-name/`
 3. **Copy the submission template** ([see below](#-submission-template))
-4. **Submit via Pull Request (PR)** before deadline
+4. **Submit via Pull Request** before deadline
+5. **Share openly** - help others and get help
 
 ### ⏰ Submission Deadline
 **Sunday, June 15, 2025 at 16:30 CEST**
 
-## 📋 Required Files
+## 📋 Project folder
 
 Your project folder must include:
 - `README.md` (using our [template](#-submission-template))
+
+Your project folder can include:
 - Presentation files (`.odp/.odg/.otp` preferred)
 - Any additional documentation
 
@@ -45,7 +48,7 @@ Copy this template to your project's `README.md`:
 # Project Name
 
 **Track:** [Choose one from above]
-**Team:** [List team members]
+**Team/Contributors:** [All who contributed - diverse skills welcomed]
 **Repository:** [Link to your code repository]
 **Demo:** [Link to live demo, video, or screenshots]
 
@@ -72,3 +75,57 @@ Copy this template to your project's `README.md`:
 
 ## What's Next
 [Future development plans]
+```
+
+---
+
+## 📋 Submission Rules
+
+### ⏰ Deadline
+- **Hard deadline:** Sunday, June 15, 2025 at 16:30 CEST
+- **No late submissions accepted**
+- Pull requests must be created before deadline
+
+### 📁 Format Requirements
+- **One project per Pull Request**
+- **Folder naming:** `/projects/your-project-name/` (no spaces, use hyphens)
+- **Required files:** README.md
+
+### 🛠️ Technical Rules
+- **Tech-agnostic:** Use any programming language, framework, or protocol
+- **Chain-agnostic:** No restrictions on blockchain platforms
+-	**Open source encouraged** (but not mandatory)
+
+### 👥 Team Rules
+- **Individual or team submissions** welcome
+- **Team size:** No limits, but consider collaboration over competition
+- **Cross-team collaboration** encouraged
+- **One submission per team/individual**
+
+### ✅ Content Requirements
+- **Original work:** Created during the hackathon (June 13-15)
+- **One track only:** Choose exactly one track for judging
+- **Complete template:** All sections must be filled
+- **Working links:** Repository and demo links must be accessible
+- **Privacy focus:** Must address privacy improvements
+
+### 🚫 Not Allowed
+- **Pre-existing projects** (unless significantly extended during hackathon)
+- **Plagiarism or copying** existing solutions
+- **Incomplete submissions** missing required components
+- **Commercial promotions** without technical innovation
+
+---
+
+## 🆘 Help & Support
+- **No GitHub account?** W3PN team can help upload your submission
+- **Technical issues?** Find organizers at the venue
+- **Questions?** Ask mentors or organizing team
+
+---
+
+Good luck and happy hacking! 🔥
+
+*Read the [Hacker Manual](https://github.com/web3privacy/hackathon-2025-berlin/blob/main/README.md) for complete event details.*
+
+> "Cypherpunks write code. We publish our code so that our fellow Cypherpunks may practice and play with it." - Eric Hughes
