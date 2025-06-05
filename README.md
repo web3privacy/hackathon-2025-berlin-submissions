@@ -47,10 +47,10 @@ Copy this template to your project's `README.md`:
 ```markdown
 # Project Name
 
-**Track:** [Choose one from above]
-**Team/Contributors:** [All who contributed - diverse skills welcomed]
-**Repository:** [Link to your code repository]
-**Demo:** [Link to live demo, video, or screenshots]
+- **Track:** [Choose one from above]
+- **Team/Contributors:** [All who contributed - diverse skills welcomed]
+- **Repository:** [Link to your code repository]
+- **Demo:** [Link to live demo, video, or screenshots]
 
 ## Description (TL;DR)
 [Brief description of your project]
