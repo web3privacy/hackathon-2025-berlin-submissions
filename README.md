@@ -24,6 +24,8 @@ What's next?
 
 *We encourage everyone to send a Pull Request with Submission earlier than a few minutes before the deadline to allow for fixes and avoid disqualification based on missing information.*
 
+> **⚠️ Important:** Keep your project repository/demo public and accessible for at least 14 days after the hackathon ends.
+
 ### 🎤 Project Presentations
 **After the submission deadline**, all teams must be prepared to present their submitted projects to judges.
 
@@ -126,6 +128,7 @@ Copy this template to your project's `README.md`:
 - **Complete template:** All sections must be filled
 - **Working links:** Repository and demo links must be accessible
 - **Privacy focus:** Must address privacy improvements
+- **Repository persistence:** Keep your project repository/demo public and accessible for at least 14 days after the hackathon
 
 ### 🚫 Not Allowed
 - **Pre-existing projects** (unless significantly extended during hackathon)
