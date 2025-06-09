@@ -20,7 +20,7 @@ What's next?
 - **Share openly** - help others and get help
 
 ### ⏰ Submission Deadline
-**Sunday, June 15, 2025 at 16:30 CEST** ([countdown](https://time.is/countdown/16:30_15_June_2025))
+**Sunday, June 15, 2025 at 16:00 CEST** ([countdown](https://time.is/countdown/16:00_15_June_2025))
 
 *We encourage everyone to send a Pull Request with Submission earlier than a few minutes before the deadline to allow for fixes and avoid disqualification based on missing information.*
 
