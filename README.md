@@ -102,7 +102,7 @@ Copy this template to your project's `README.md`:
 ## 📋 Submission Rules
 
 ### ⏰ Deadline
-- **Hard deadline:** Sunday, June 15, 2025 at 16:30 CEST
+- **Hard deadline:** Sunday, June 15, 2025 at 16:00 CEST
 - **No late submissions accepted**
 - Pull requests must be created before deadline
 
