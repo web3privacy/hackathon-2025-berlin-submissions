@@ -67,7 +67,7 @@ Copy this template to your project's `README.md`:
 ```markdown
 # [Project Name]
 
-- **Track:** [Choose one from above]
+- **Track(s):** [Choose one or two from above]
 - **Team/Contributors:** [All who contributed - diverse skills welcomed]
 - **Repository:** [Link to your code repository]
 - **Demo:** [Link to live demo, video, or screenshots]
@@ -124,7 +124,7 @@ Copy this template to your project's `README.md`:
 
 ### ✅ Content Requirements
 - **Original work:** Created during the hackathon (June 13-15)
-- **One track only:** Choose exactly one track for judging
+- **Track selection:** Choose one or two tracks for judging
 - **Complete template:** All sections must be filled
 - **Working links:** Repository and demo links must be accessible
 - **Privacy focus:** Must address privacy improvements
