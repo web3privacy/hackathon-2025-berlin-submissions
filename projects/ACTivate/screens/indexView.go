@@ -96,7 +96,7 @@ func Make(a fyne.App, w fyne.Window) fyne.CanvasObject {
 	i.nodeConfig.welcomeMessage = defaultWelcomeMsg
 	i.nodeConfig.password = defaultPassword
 	i.nodeConfig.natAddress = defaultNatAddress
-	i.nodeConfig.rpcEndpoint = defaultTestRPC
+	i.nodeConfig.rpcEndpoint = defaultRPC
 	i.nodeConfig.swapEnable = defaultSwapEnable
 
 	i.view = container.NewBorder(container.NewVBox(i.intro), nil, nil, nil, container.NewStack(i.showStartView(false)))
@@ -144,10 +144,11 @@ func (i *index) start(path, password, welcomeMessage, natAddress, rpcEndpoint st
 func (i *index) initSwarm(dataDir, welcomeMessage, password, natAddress, rpcEndpoint string, swapEnable bool) error {
 	i.logger.Log(welcomeMessage)
 
-	isMainnet := rpcEndpoint == defaultRPC
-	networkID := TestnetNetworkID
-	if isMainnet {
-		networkID = MainnetNetworkID
+	// isMainnet := rpcEndpoint == defaultRPC
+	isMainnet := true
+	networkID := MainnetNetworkID
+	if !isMainnet {
+		networkID = TestnetNetworkID
 	}
 
 	lo := &beelite.LiteOptions{
