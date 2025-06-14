@@ -29,12 +29,7 @@ What's next?
 ### 🎤 Project Presentations
 **After the submission deadline**, all teams must be prepared to present their submitted projects to judges.
 
-- Format: Demo presentation preferred over slides
-- Time allocation: 7 minutes total
-  -	4 minutes for demo/slides
-  -	3 minutes for questions
- 
-Watch the official Signal group for announcements and further information about the presentation process after the submissions close.
+More information: [📊 Judging Process](https://github.com/web3privacy/hackathon-2025-berlin/blob/main/README.md#-submissions--judging-process) @ Hacker Manual
 
 ### ⚖️ Judging
 All submissions will be evaluated by expert judges according to the [Judging Criteria](https://github.com/web3privacy/hackathon-2025-berlin/blob/main/README.md#%EF%B8%8F-judging-criteria) after the deadline and the project presentations.
