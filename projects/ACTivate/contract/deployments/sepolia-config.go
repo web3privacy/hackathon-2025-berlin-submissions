@@ -193,14 +193,11 @@ func GetSepoliaConfig() *AdminContractConfig {
   "gasUsed": "288805",
   "deployedAt": "2025-06-14T11:37:49.207Z"
 }`
-	
+
 	var config AdminContractConfig
 	if err := json.Unmarshal([]byte(configJSON), &config); err != nil {
 		log.Fatalf("Failed to unmarshal config: %v", err)
 	}
-	
+
 	return &config
 }
-
-// AdminContractABI contains the contract ABI as a JSON string
-const AdminContractABI = `[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"OwnableInvalidOwner","type":"error"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"OwnableUnauthorizedAccount","type":"error"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"bytes32","name":"owner","type":"bytes32"},{"indexed":false,"internalType":"bytes32","name":"actref","type":"bytes32"},{"indexed":false,"internalType":"string","name":"topic","type":"string"}],"name":"DataSentToTarget","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"inputs":[],"name":"getAdmin","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"target","type":"address"},{"internalType":"bytes32","name":"ownerParam","type":"bytes32"},{"internalType":"bytes32","name":"actref","type":"bytes32"},{"internalType":"string","name":"topic","type":"string"}],"name":"sendDataToTarget","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"}]`

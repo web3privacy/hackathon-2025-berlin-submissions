@@ -1,4 +1,4 @@
-package admincontract
+package screens
 
 import (
 	"log"
@@ -7,7 +7,7 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi"
 )
 
-const AdminContractABI = `[
+const DataContractABI = `[
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
@@ -105,8 +105,8 @@ const AdminContractABI = `[
 	}
 ]`
 
-func ParseAdminContractABI() (abi.ABI, error) {
-	parsedABI, err := abi.JSON(strings.NewReader(AdminContractABI))
+func ParseContractABI() (abi.ABI, error) {
+	parsedABI, err := abi.JSON(strings.NewReader(DataContractABI))
 	if err != nil {
 		log.Fatalf("Failed to parse ABI: %v", err)
 	}
