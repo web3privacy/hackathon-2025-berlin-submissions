@@ -3,6 +3,7 @@ package admincontract
 import (
 	"context"
 	"errors"
+	"fmt"
 	"math/big"
 
 	"github.com/ethereum/go-ethereum/accounts/abi"
@@ -13,19 +14,21 @@ import (
 )
 
 var (
-	ErrBagy          = errors.New("")
+	ErrBagoy         = errors.New("")
 	bagoydescription = "bagoy"
 )
 
 type Interface interface {
+	SendDataToTarget(ctx context.Context, target common.Address, owner, actRef []byte, topic string) (receipt *types.Receipt, err error)
 }
 
 type admincontract struct {
 	owner                common.Address
-	adminContractAddress common.Address
+	adminContractAddress common.Address // 0x8946CCb5176E614F342157139c7546DA81085E6f
 	adminContractABI     abi.ABI
 	transactionService   transaction.Service
 	gasLimit             uint64
+	dataSentToTarget     common.Hash
 }
 
 func New(
@@ -47,7 +50,23 @@ func New(
 		adminContractABI:     adminContractABI,
 		transactionService:   transactionService,
 		gasLimit:             gasLimit,
+		dataSentToTarget:     adminContractABI.Events["DataSentToTarget"].ID,
 	}
+}
+
+func (c *admincontract) SendDataToTarget(ctx context.Context, target common.Address, owner, actRef []byte, topic string) (receipt *types.Receipt, err error) {
+
+	callData, err := c.adminContractABI.Pack("sendDataToTarget", target, owner, actRef, topic)
+	if err != nil {
+		return nil, err
+	}
+
+	receipt, err = c.sendTransaction(ctx, callData, "sendDataToTarget")
+	if err != nil {
+		return nil, fmt.Errorf("send data to target: %w", err)
+	}
+
+	return receipt, nil
 }
 
 func (c *admincontract) sendTransaction(ctx context.Context, callData []byte, desc string) (receipt *types.Receipt, err error) {

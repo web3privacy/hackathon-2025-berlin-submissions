@@ -23,7 +23,7 @@ func (i *index) showInfoCard(ultraLightMode bool) *widget.Card {
 		// stampsContent := i.stampsContent(batchRadio)
 		// buyBatchButton := i.buyBatchButton(batchRadio)
 		balanceContent := i.balanceContent()
-		infoContent = container.NewVBox(addressContent, balanceContent, nil, nil)
+		infoContent = container.NewVBox(addressContent, balanceContent)
 	}
 	infoContent.Add(walletDataButton)
 
