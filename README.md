@@ -50,7 +50,7 @@ Your project folder can include:
 
 ## 🛠️ Tracks
 
-Choose one track for your submission ([see detailed descriptions](https://github.com/web3privacy/hackathon-2025-berlin/blob/main/README.md#%EF%B8%8F-hackathon-tracks)):
+Choose one/two track(s) for your submission ([see detailed descriptions](https://github.com/web3privacy/hackathon-2025-berlin/blob/main/README.md#%EF%B8%8F-hackathon-tracks)):
 
 1. **Advanced Cryptography** - MPC, TEE, ZK, DID, FHE
 2. **Censorship Resistance** - Tor, mixnets, Nostr, mesh networks
