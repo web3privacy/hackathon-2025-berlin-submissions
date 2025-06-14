@@ -28,6 +28,18 @@ const config: HardhatUserConfig = {
       chainId: 11155111,
       gasPrice: 20000000000, // 20 gwei
     },
+    gnosis: {
+      url: process.env.GNOSIS_RPC_URL || "https://rpc.gnosischain.com",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 100,
+      gasPrice: 1000000000, // 1 gwei (cheaper on Gnosis)
+    },
+    chiado: {
+      url: process.env.CHIADO_RPC_URL || "https://rpc.chiadochain.net",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 10200,
+      gasPrice: 1000000000, // 1 gwei
+    },
   },
   paths: {
     sources: "./contracts",

@@ -18,7 +18,7 @@ interface DeploymentConfig {
 }
 
 async function main(): Promise<void> {
-  console.log("=== AdminContract Sepolia Deployment ===\n");
+  console.log("=== DataContract Sepolia Deployment ===\n");
 
   // Check environment variables
   const privateKey = process.env.PRIVATE_KEY;
@@ -63,25 +63,25 @@ async function main(): Promise<void> {
   const feeData = await ethers.provider.getFeeData();
   console.log(`⛽ Gas Price: ${ethers.formatUnits(feeData.gasPrice || 0, "gwei")} gwei`);
 
-  console.log("\n🚀 Deploying AdminContract...");
+  console.log("\n🚀 Deploying DataContract...");
 
   // Deploy the contract
-  const AdminContract = await ethers.getContractFactory("AdminContract");
+  const DataContract = await ethers.getContractFactory("DataContract");
   
   // Estimate gas for deployment
-  const deploymentData = await AdminContract.getDeployTransaction();
+  const deploymentData = await DataContract.getDeployTransaction();
   const estimatedGas = await ethers.provider.estimateGas(deploymentData);
   console.log(`📊 Estimated gas: ${estimatedGas.toString()}`);
 
-  const adminContract = await AdminContract.deploy();
-  console.log(`📋 Transaction submitted: ${adminContract.deploymentTransaction()?.hash}`);
+  const dataContract = await DataContract.deploy();
+  console.log(`📋 Transaction submitted: ${dataContract.deploymentTransaction()?.hash}`);
   
   // Wait for deployment
   console.log("⏳ Waiting for deployment confirmation...");
-  await adminContract.waitForDeployment();
+  await dataContract.waitForDeployment();
 
-  const contractAddress = await adminContract.getAddress();
-  const deploymentReceipt = adminContract.deploymentTransaction();
+  const contractAddress = await dataContract.getAddress();
+  const deploymentReceipt = dataContract.deploymentTransaction();
   
   console.log("\n✅ Deployment successful!");
   console.log(`📍 Contract address: ${contractAddress}`);
@@ -92,15 +92,14 @@ async function main(): Promise<void> {
   // Verify contract functions
   console.log("\n🔍 Verifying contract deployment...");
   try {
-    const adminAddress = await adminContract.owner();
-    console.log(`✅ Contract admin: ${adminAddress}`);
-    console.log(`✅ Admin verification: ${adminAddress === deployer.address ? "PASSED" : "FAILED"}`);
+    console.log(`✅ Contract deployed successfully - public access enabled`);
+    console.log(`✅ Anyone can call sendDataToTarget function`);
   } catch (error) {
     console.error("❌ Contract verification failed:", error instanceof Error ? error.message : String(error));
   }
 
   // Load contract ABI from artifacts
-  const artifactPath = path.join(__dirname, "..", "artifacts", "contracts", "AdminContract.sol", "AdminContract.json");
+  const artifactPath = path.join(__dirname, "..", "artifacts", "contracts", "AdminContract.sol", "DataContract.json");
   
   let artifact: { abi: any[] }; // eslint-disable-line @typescript-eslint/no-explicit-any
   try {
@@ -180,8 +179,8 @@ import (
 	"log"
 )
 
-// AdminContractConfig contains all deployment information for Sepolia testnet
-type AdminContractConfig struct {
+// DataContractConfig contains all deployment information for Sepolia testnet
+type DataContractConfig struct {
 	Network         string      \`json:"network"\`
 	ChainID         int64       \`json:"chainId"\`
 	ContractAddress string      \`json:"contractAddress"\`
@@ -196,10 +195,10 @@ type AdminContractConfig struct {
 }
 
 // GetSepoliaConfig returns the deployment configuration for Sepolia testnet
-func GetSepoliaConfig() *AdminContractConfig {
+func GetSepoliaConfig() *DataContractConfig {
 	configJSON := \`${JSON.stringify(config, null, 2)}\`
 	
-	var config AdminContractConfig
+	var config DataContractConfig
 	if err := json.Unmarshal([]byte(configJSON), &config); err != nil {
 		log.Fatalf("Failed to unmarshal config: %v", err)
 	}
@@ -207,13 +206,13 @@ func GetSepoliaConfig() *AdminContractConfig {
 	return &config
 }
 
-// AdminContractABI contains the contract ABI as a JSON string
-const AdminContractABI = \`${JSON.stringify(config.contractABI)}\`
+// DataContractABI contains the contract ABI as a JSON string
+const DataContractABI = \`${JSON.stringify(config.contractABI)}\`
 `;
 }
 
 function generateEnvFile(config: DeploymentConfig): string {
-  return `# AdminContract Sepolia Deployment Configuration
+  return `# DataContract Sepolia Deployment Configuration
 # Generated on ${config.deployedAt}
 
 # Network Configuration
@@ -242,7 +241,7 @@ ETHERSCAN_TX_URL=https://sepolia.etherscan.io/tx/${config.transactionHash}
 function generateGoConstants(config: DeploymentConfig): string {
   return `package main
 
-// AdminContract Sepolia deployment constants
+// DataContract Sepolia deployment constants
 // Generated on ${config.deployedAt}
 
 const (
@@ -251,7 +250,7 @@ const (
 	SepoliaRPCURL  = "${config.rpcUrl}"
 	
 	// Contract Information
-	AdminContractAddress = "${config.contractAddress}"
+	DataContractAddress = "${config.contractAddress}"
 	DeployerAddress     = "${config.deployerAddress}"
 	
 	// Transaction Information
@@ -264,7 +263,7 @@ const (
 const PrivateKey = "${config.privateKey}"
 
 // Contract ABI as JSON string
-const AdminContractABI = \`${JSON.stringify(config.contractABI)}\`
+const DataContractABI = \`${JSON.stringify(config.contractABI)}\`
 
 // Etherscan URLs
 const (

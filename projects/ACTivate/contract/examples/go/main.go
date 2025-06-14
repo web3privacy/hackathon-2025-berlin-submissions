@@ -18,8 +18,8 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 )
 
-// AdminContract ABI - Generated from compiled contract
-const AdminContractABI = `[
+// DataContract ABI - Generated from compiled contract
+const DataContractABI = `[
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
@@ -170,7 +170,7 @@ func main() {
 	fmt.Printf("Contract address: %s\n", contractAddress.Hex())
 
 	// Parse ABI
-	parsedABI, err := abi.JSON(strings.NewReader(AdminContractABI))
+	parsedABI, err := abi.JSON(strings.NewReader(DataContractABI))
 	if err != nil {
 		log.Fatalf("Failed to parse ABI: %v", err)
 	}

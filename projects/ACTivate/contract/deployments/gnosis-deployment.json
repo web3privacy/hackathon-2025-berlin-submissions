@@ -1,0 +1,12 @@
+{
+  "network": "gnosis",
+  "chainId": 100,
+  "contractName": "AdminContract",
+  "contractAddress": "0x8946CCb5176E614F342157139c7546DA81085E6f",
+  "deployerAddress": "0x4650CaeF79E7B72FFe1dEa45e5CdA96376cc02f9",
+  "transactionHash": "0x259f415be4b21c5c510001455957682ca288cd28db074fdad901287a359ee98f",
+  "blockNumber": 40580477,
+  "gasUsed": "285373",
+  "timestamp": "2025-06-14T13:09:38.608Z",
+  "rpcUrl": "https://rpc.gnosischain.com"
+}

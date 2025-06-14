@@ -1,19 +1,19 @@
-# AdminContract
+# DataContract
 
-A secure smart contract with admin-controlled data emission functionality, built with Hardhat and OpenZeppelin.
+A smart contract with public data emission functionality, built with Hardhat and designed for open access.
 
 ## Features
 
-- **Admin Control**: Only the contract deployer can emit events with custom data
-- **Secure Access**: Uses OpenZeppelin's `Ownable` for access control
+- **Public Access**: Anyone can call contract functions to emit events with custom data
+- **No Access Control**: Open contract design without admin restrictions
 - **Structured Data**: Emit events with owner, action reference, and topic parameters
 - **Event Logging**: Emits `DataSentToTarget` events for comprehensive tracking
 - **No Token Functionality**: Pure event emission contract without any token transfers
 
 ## Contract Details
 
-- **Contract Name**: AdminContract
-- **Admin**: Contract deployer address
+- **Contract Name**: DataContract
+- **Access Level**: Public (no admin required)
 - **Purpose**: Emit events with structured data to target addresses
 
 ## Event Structure
@@ -21,7 +21,7 @@ A secure smart contract with admin-controlled data emission functionality, built
 The contract emits `DataSentToTarget` events with the following structure:
 ```solidity
 event DataSentToTarget(
-    address indexed from,    // Admin address (event sender)
+    address indexed from,    // Caller address (whoever sent the transaction)
     address indexed to,      // Target address
     bytes32 owner,          // Owner identifier (32 bytes)
     bytes32 actref,         // Action reference (32 bytes)
@@ -32,7 +32,7 @@ event DataSentToTarget(
 ## Key Functions
 
 ### `sendDataToTarget(address target, bytes32 ownerParam, bytes32 actref, string calldata topic)`
-- **Access**: Admin only
+- **Access**: Public (anyone can call)
 - **Purpose**: Emit structured data to a target address
 - **Parameters**:
   - `target`: Target address
@@ -40,10 +40,6 @@ event DataSentToTarget(
   - `actref`: Action reference identifier (32 bytes)
   - `topic`: Topic description (string)
 - **Events**: Emits `DataSentToTarget` event
-
-### `getAdmin()`
-- **Access**: Public view
-- **Purpose**: Returns the admin address
 
 ## Development Setup
 

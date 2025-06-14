@@ -1,8 +1,8 @@
 import { ethers } from "hardhat";
-import { AdminContract } from "../typechain-types";
+import { DataContract } from "../typechain-types";
 
 async function main() {
-  console.log("=== AdminContract Interaction Script ===\n");
+  console.log("=== DataContract Interaction Script ===\n");
 
   // Get the deployed contract address
   const contractAddress = process.env.CONTRACT_ADDRESS;
@@ -19,15 +19,13 @@ async function main() {
   console.log("User1 address:", user1.address);
 
   // Connect to the deployed contract
-  const AdminContract = await ethers.getContractFactory("AdminContract");
-  const adminContract = AdminContract.attach(contractAddress) as AdminContract;
+  const DataContract = await ethers.getContractFactory("DataContract");
+  const dataContract = DataContract.attach(contractAddress) as DataContract;
 
   console.log("\n=== Contract Information ===");
   console.log("Contract address:", contractAddress);
-  
-  // Skip admin check for now and go directly to sending data
-  console.log("Deployer address:", deployer.address);
-  console.log("Assuming deployer is admin...");
+  console.log("Public access enabled - anyone can call functions");
+  console.log("Current caller:", deployer.address);
 
   console.log("\n=== Sending Data to Target ===");
   
@@ -43,9 +41,9 @@ async function main() {
   console.log("Topic:", topic);
 
   try {
-    // Send data to target (only admin can do this)
+    // Send data to target (anyone can do this now)
     console.log("\nSending data to target...");
-    const tx = await adminContract.sendDataToTarget(
+    const tx = await dataContract.sendDataToTarget(
       targetAddress,
       ownerParam,
       actref,
@@ -68,7 +66,7 @@ async function main() {
     for (let i = 0; i < receipt.logs.length; i++) {
       const log = receipt.logs[i];
       try {
-        const parsedLog = adminContract.interface.parseLog({
+        const parsedLog = dataContract.interface.parseLog({
           topics: log.topics,
           data: log.data
         });
@@ -89,28 +87,28 @@ async function main() {
     console.error("Error sending data:", error.message);
   }
 
-  console.log("\n=== Testing Access Control ===");
+  console.log("\n=== Testing Multi-User Access ===");
   
   try {
-    // Try to call from non-admin account (should fail)
-    console.log("Attempting to call from non-admin account...");
-    const userContract = adminContract.connect(user1);
+    // Test calling from different account (should now work)
+    console.log("Testing call from different account...");
+    const userContract = dataContract.connect(user1);
     
     const tx = await userContract.sendDataToTarget(
       deployer.address,
-      ethers.encodeBytes32String("SHOULD_FAIL"),
-      ethers.encodeBytes32String("ACCESS_DENIED"),
-      "This should fail"
+      ethers.encodeBytes32String("USER1_CALL"),
+      ethers.encodeBytes32String("PUBLIC_ACCESS"),
+      "Call from user1 - should work now"
     );
     
     const receipt = await tx.wait();
     if (receipt) {
-      console.log("ERROR: Non-admin was able to call function!");
+      console.log("✓ Multi-user access working correctly!");
+      console.log("Transaction confirmed in block:", receipt.blockNumber);
     }
     
   } catch (error: any) {
-    console.log("✓ Access control working correctly - non-admin rejected");
-    console.log("Error message:", error.message.split("'")[1] || error.message);
+    console.log("✗ Multi-user access failed:", error.message);
   }
 
   console.log("\n=== Multiple Data Sends ===");
@@ -142,7 +140,7 @@ async function main() {
     console.log(`\nSending batch entry ${i + 1}/${dataEntries.length}...`);
     
     try {
-      const tx = await adminContract.sendDataToTarget(
+      const tx = await dataContract.sendDataToTarget(
         entry.target,
         entry.owner,
         entry.actref,

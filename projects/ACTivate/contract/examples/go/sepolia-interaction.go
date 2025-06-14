@@ -107,7 +107,7 @@ Please either:
 	contractAddress := common.HexToAddress(contractAddressHex)
 
 	// AdminContract ABI - This should match your deployed contract
-	const AdminContractABI = `[
+	const DataContractABI = `[
 		{
 			"inputs": [],
 			"stateMutability": "nonpayable",
@@ -207,7 +207,7 @@ Please either:
 	]`
 
 	// Parse ABI
-	parsedABI, err := abi.JSON(strings.NewReader(AdminContractABI))
+	parsedABI, err := abi.JSON(strings.NewReader(DataContractABI))
 	if err != nil {
 		log.Fatalf("Failed to parse ABI: %v", err)
 	}
