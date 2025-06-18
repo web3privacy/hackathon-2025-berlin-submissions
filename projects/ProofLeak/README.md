@@ -8,6 +8,8 @@
 ## Description (TL;DR)
 A private and secure whistleblowing platform using zk email verification and onchain attestations to ensure source credibility without compromising anonymity.
 
+We want to build a cryptographic infrastructure to free the truth. With ZK Proofs we don't have to choose between anonimity and credibility anymore. We can have both. We can have truth.
+
 ## Problem
 Most anonymous reporting platforms rely on central servers, lack cryptographic verification, and expose whistleblowers to surveillance or metadata leaks. Without decentralized trust or ZK-based guarantees, both source safety and information integrity are at risk.
 
@@ -32,5 +34,5 @@ We believe this tool should be accessible to all, a Common Public Good funded by
 ## What's Next
 - Technical community validation
 - Develop MVP for full submission flow (wallet + eml + onchain attestation)
-- Expand group attestation features for verified journalist and legal forums
+- Expand group attestation features for verified journalist and legal forums -> the possibility to create closed forums where individuals meeting the criteria can receive anonymous, verfied leaks in order to take the necessary steps until the wider public can be made aware of. Sometimes information needs to be private until it can be made public for the greater good. 
 - Launch with transparency-focused partners and fund as a public good
