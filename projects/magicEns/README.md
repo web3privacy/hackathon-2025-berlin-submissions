@@ -3,7 +3,7 @@
 - Track(s): User Onboarding - Applied Encryption  
 - Team/Contributors: zkfriendly, sembrestels, FaezehShakouri  
 - Repository: https://github.com/stealtheth  
-- Demo: [Link to live demo, video, or screenshots]
+- Demo: https://www.youtube.com/watch?v=Hv_N-B20C2s
 
 ## Description (TL;DR)
 
