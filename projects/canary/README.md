@@ -5,7 +5,7 @@ CANARY - HACKATHON SUBMISSION
 - **Track(s):** Public Goods, Advanced Cryptography (MPC/Threshold Crypto), Censorship Resistance, 
 - **Team/Contributors:** Kieran P, Lina P, Ryan C
 - **Repository:** https://github.com/TheThirdRoom/canary
-- **Demo:** http://104.248.37.62:3000
+- **Demo:** https://canary-demo-z4ftr.ondigitalocean.app/
 
 ## Description (TL;DR)
 Canary is an automated deadman switch for truth protection, using TACo threshold encryption, decentralized storage, and smart contracts to ensure sensitive information reaches the public even if journalists, activists, or whistleblowers are silenced. Users create encrypted "dossiers" that automatically release to trusted recipients (or the public) if they fail to check in, providing uncensorable protection for those who protect democracy.
